@@ -1,0 +1,137 @@
+/* Base styles for the application */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: normal;
+    color: #444;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* Main layout (grid system for sidebar and content) */
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar content";
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+  }
+  
+  .sidebar {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    grid-area: sidebar;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #2980b9;
+  }
+  
+  .content {
+    background-color: white;
+    padding: 20px;
+    grid-area: content;
+    overflow-y: auto;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .content h2 {
+    margin-top: 0;
+  }
+  
+  /* Responsive design for mobile and tablet screens */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "content";
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  
+    header {
+      text-align: center;
+    }
+  
+    .content {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      font-size: 1.2em;
+    }
+  
+    .content {
+      padding: 15px;
+    }
+  }
+  
