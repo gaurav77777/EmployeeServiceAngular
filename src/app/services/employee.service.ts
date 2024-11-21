@@ -14,7 +14,8 @@ interface Employee {
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiUrl = 'http://localhost:3000/employees'; // URL of the JSON Server API
+  /* private apiUrl = 'http://localhost:3000/employees'; // URL of the JSON Server API */
+  private apiUrl = 'http://localhost:8081/api/employees';
 
   constructor(private http: HttpClient) {}
 
