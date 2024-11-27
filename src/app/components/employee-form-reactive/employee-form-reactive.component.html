@@ -1,0 +1,31 @@
+<p>employee-form-reactive works!</p>
+<div class="employee-form">
+    <h2>Add Employee</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" />
+        <div *ngIf="employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched">
+          Name is required.
+        </div>
+      </div>
+      
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" />
+        <div *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched">
+          Please provide a valid email.
+        </div>
+      </div>
+      
+      <div>
+        <label for="position">Position:</label>
+        <input id="position" formControlName="position" type="text" />
+        <div *ngIf="employeeForm.get('position')?.invalid && employeeForm.get('position')?.touched">
+          Position is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="employeeForm.invalid">Submit</button>
+    </form>
+  </div>
