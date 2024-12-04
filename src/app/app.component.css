@@ -134,4 +134,181 @@
       padding: 15px;
     }
   }
-  
+  /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Header (Navbar) Styles */
+header {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar .logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;  /* Adds equal space between each link */
+  align-items: center;
+  gap: 20px;  /* Adds fixed space between each link */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;  /* Adds equal space between each link */
+  align-items: center;
+  gap: 20px;  /* Adds fixed space between each link */
+}
+
+.navbar .nav-links li {
+  padding: 0 15px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar .nav-links li a:hover {
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Main Content Styles */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+/* Optional: Adjust for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: relative;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #333; /* Dropdown toggle button style */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 100%;  /* Makes sure dropdown appears below the button */
+  left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style links in the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+/* Optional: Adjust for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: relative;
+  }
+}

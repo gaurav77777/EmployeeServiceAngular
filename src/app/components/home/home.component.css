@@ -1,0 +1,19 @@
+/* home.component.css */
+
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0f7fa; /* Light blue color */
+    min-height: 100vh; /* Ensures the container takes up full height of the page */
+  }
+  
+  .home-container h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .home-container p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  

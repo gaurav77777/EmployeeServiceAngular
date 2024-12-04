@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EmployeeService } from '../../services/employee.service';
 import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-employee-form',
   standalone: true,  // Mark this component as standalone
-  imports: [FormsModule],  // Add FormsModule to the imports array here
+  imports: [FormsModule , RouterModule],  // Add FormsModule to the imports array here
   templateUrl: './employee-form.component.html',
   styleUrls: ['./employee-form.component.css']
 })

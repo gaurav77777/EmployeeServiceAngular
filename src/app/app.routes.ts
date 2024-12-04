@@ -2,6 +2,7 @@ import { Route, Routes } from '@angular/router';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeFormReactiveComponent } from './components/employee-form-reactive/employee-form-reactive.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -13,7 +14,7 @@ import { EmployeeFormReactiveComponent } from './components/employee-form-reacti
 ]; */
 
 export const routes: Route[] = [
-  { path: '', redirectTo: '/employees', pathMatch: 'full' },
+  { path: '', component: HomeComponent },  // Default route
   { path: 'employees', component: EmployeeListComponent },
   { path: 'employee-form', component: EmployeeFormReactiveComponent },
   { path: 'employee-form/:id', component: EmployeeFormReactiveComponent }

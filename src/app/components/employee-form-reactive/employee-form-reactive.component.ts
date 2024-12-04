@@ -1,11 +1,12 @@
 import { Component , OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import necessary form modules
 import { CommonModule } from '@angular/common';  // Import CommonModule
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-employee-form-reactive',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule , RouterModule],
   templateUrl: './employee-form-reactive.component.html',
   styleUrl: './employee-form-reactive.component.css'
 })
